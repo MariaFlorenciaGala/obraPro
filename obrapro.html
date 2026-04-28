@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obra Pro — Profesionales en Cada Detalle | Córdoba</title>
+    <meta name="description" content="Herrería, soldadura, aires acondicionados, pintura, techos, reformas y electricidad en Córdoba Capital. Presupuestos sin cargo. WhatsApp: 351-8759375">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --yellow: #FFD700;
+            --yellow-dark: #e6c200;
+            --black: #080808;
+            --gray-dark: #141414;
+            --gray-mid: #1f1f1f;
+            --gray-light: #888;
+            --white: #fff;
+            --wa: #25D366;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Barlow', sans-serif;
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ── NAV ─────────────────────────── */
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            background: rgba(8,8,8,0.96);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(255,215,0,0.12);
+            padding: 0 5%;
+            height: 84px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: border-color 0.3s;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .nav-logo img { height: 45px; width: auto; }
+
+        .nav-brand {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: 1.35rem;
+            color: var(--white);
+            letter-spacing: 0.5px;
+            line-height: 1;
+        }
+        .nav-brand span { color: var(--yellow); }
+
+        .nav-sub {
+            font-size: 0.52rem;
+            color: var(--gray-light);
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            line-height: 1;
+            margin-top: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: var(--gray-light);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--yellow); }
+
+        .nav-wa {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--wa);
+            color: white;
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.88rem;
+            transition: opacity 0.2s;
+        }
+        .nav-wa:hover { opacity: 0.88; }
+
+        /* ── HERO ─────────────────────────── */
+        .hero {
+            min-height: 100vh;
+            background:
+                repeating-linear-gradient(
+                    90deg,
+                    rgba(255,255,255,0.015) 0px,
+                    rgba(255,255,255,0.015) 1px,
+                    transparent 1px,
+                    transparent 60px
+                ),
+                repeating-linear-gradient(
+                    0deg,
+                    rgba(255,255,255,0.015) 0px,
+                    rgba(255,255,255,0.015) 1px,
+                    transparent 1px,
+                    transparent 60px
+                ),
+                linear-gradient(160deg, #1a1a1a 0%, #0d0d0d 40%, #080808 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 110px 5% 70px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 50% 0%, rgba(255,215,0,0.05) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero-logo-img {
+            height: 200px;
+            width: auto;
+            max-width: 90vw;
+            margin-bottom: 5%;
+            animation: fadeInDown 0.7s ease;
+            filter: drop-shadow(0 4px 16px rgba(0,0,0,0.5));
+        }
+
+        .hero h1 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: clamp(3.5rem, 9vw, 7rem);
+            line-height: 0.92;
+            letter-spacing: -1px;
+            animation: fadeInUp 0.7s ease 0.1s both;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+        }
+        .hero h1 .hl { color: var(--yellow); display: block; }
+
+        .hero-tag {
+            font-size: clamp(0.75rem, 1.8vw, 0.9rem);
+            color: rgba(255,255,255,0.75);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin: 1.2rem 0 1.8rem;
+            animation: fadeInUp 0.7s ease 0.18s both;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,215,0,0.15);
+            border: 1px solid rgba(255,215,0,0.4);
+            color: var(--yellow);
+            padding: 8px 22px;
+            border-radius: 50px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            margin-bottom: 2.2rem;
+            animation: fadeInUp 0.7s ease 0.22s both;
+            backdrop-filter: blur(6px);
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 0;
+            animation: fadeInUp 0.7s ease 0.28s both;
+        }
+
+        .btn-y {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--yellow);
+            color: var(--black);
+            text-decoration: none;
+            padding: 11px 22px;
+            border-radius: 4px;
+            font-weight: 800;
+            font-size: 0.7rem;
+            font-family: 'Barlow Condensed', sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.2s;
+        }
+        .btn-y:hover {
+            background: var(--yellow-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 32px rgba(255,215,0,0.28);
+        }
+
+        .btn-ghost {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: transparent;
+            color: var(--white);
+            text-decoration: none;
+            padding: 11px 22px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.7rem;
+            font-family: 'Barlow Condensed', sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: 1.5px solid rgba(255,255,255,0.18);
+            transition: all 0.2s;
+        }
+        .btn-ghost:hover { border-color: var(--yellow); color: var(--yellow); }
+
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+            margin-top: 1.5rem;
+            animation: fadeInUp 0.7s ease 0.35s both;
+        }
+        .stat-num {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 2.9rem;
+            font-weight: 900;
+            color: var(--yellow);
+            line-height: 1;
+        }
+        .stat-lbl {
+            font-size: 1.08rem;
+            color: var(--gray-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ── SHARED ───────────────────────── */
+        section { padding: 40px 5%; }
+
+        .s-label {
+            font-size: 0.72rem;
+            color: var(--yellow);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+        }
+        .s-title {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            line-height: 1;
+            margin-bottom: 0.8rem;
+        }
+        .s-sub { color: var(--gray-light); font-size: 0.95rem; }
+
+        /* ── SERVICIOS ────────────────────── */
+        .services { background: var(--gray-dark); padding-top: 20px; }
+        .services-hd { margin-bottom: 2rem; }
+
+        .srv-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+            gap: 1px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .srv-card {
+            background: var(--gray-dark);
+            padding: 2.5rem 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: background 0.25s;
+        }
+        .srv-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 0; height: 3px;
+            background: var(--yellow);
+            transition: width 0.3s;
+        }
+        .srv-card:hover { background: var(--gray-mid); }
+        .srv-card:hover::after { width: 100%; }
+
+        .srv-icon {
+            width: 50px; height: 50px;
+            background: rgba(255,215,0,0.09);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.35rem;
+            color: var(--yellow);
+            margin-bottom: 1.4rem;
+            transition: background 0.25s;
+        }
+        .srv-card:hover .srv-icon { background: rgba(255,215,0,0.18); }
+
+        .srv-name {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin-bottom: 0.4rem;
+        }
+        .srv-desc { color: var(--gray-light); font-size: 0.88rem; line-height: 1.6; }
+
+        /* ── COOL ROOF ────────────────────── */
+        .coolroof {
+            background: var(--black);
+            border-top: 1px solid rgba(255,215,0,0.08);
+            border-bottom: 1px solid rgba(255,215,0,0.08);
+        }
+        .cr-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: start;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .cr-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255,215,0,0.1);
+            border: 1px solid rgba(255,215,0,0.28);
+            color: var(--yellow);
+            padding: 5px 14px;
+            border-radius: 50px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        .cr-list {
+            list-style: none;
+            margin-top: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.7rem;
+        }
+        .cr-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.93rem;
+        }
+        .cr-check {
+            width: 20px; height: 20px;
+            min-width: 20px;
+            background: var(--yellow);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+        .cr-check::after {
+            content: '';
+            display: block;
+            width: 10px; height: 6px;
+            border-left: 2px solid #000;
+            border-bottom: 2px solid #000;
+            transform: rotate(-45deg) translateY(-1px);
+        }
+
+        .cr-visual {
+            background: var(--gray-dark);
+            border: 1px solid rgba(255,215,0,0.12);
+            border-radius: 8px;
+            padding: 2.5rem;
+        }
+        .cr-visual-title {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--yellow);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .heat-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 0.55rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+        }
+        .heat-row:last-of-type { border: none; }
+        .heat-lbl { font-size: 0.82rem; color: var(--gray-light); width: 90px; flex-shrink: 0; }
+        .heat-bar { flex: 1; height: 5px; background: rgba(255,255,255,0.06); border-radius: 3px; overflow: hidden; }
+        .heat-fill { height: 100%; background: var(--yellow); border-radius: 3px; }
+        .heat-pct { font-size: 0.82rem; font-weight: 700; color: var(--yellow); width: 32px; text-align: right; }
+
+        /* ── WHY US ───────────────────────── */
+        .whyus { background: var(--gray-dark); text-align: center; }
+        .whyus-hd { margin-bottom: 3rem; }
+
+        .pillars {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 2rem;
+            max-width: 950px;
+            margin: 0 auto;
+        }
+        .pillar { padding: 2rem 1.5rem; }
+        .pillar-icon { font-size: 2rem; color: var(--yellow); margin-bottom: 1rem; }
+        .pillar-title {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 1.15rem;
+            margin-bottom: 0.4rem;
+        }
+        .pillar-desc { color: var(--gray-light); font-size: 0.88rem; }
+
+        /* ── ZONAS ────────────────────────── */
+        .zones { background: var(--black); text-align: center; }
+        .zones-hd { margin-bottom: 2.5rem; }
+
+        .zone-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+            max-width: 720px;
+            margin: 0 auto 1.5rem;
+        }
+        .zone-pill {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid rgba(255,215,0,0.25);
+            background: rgba(255,215,0,0.04);
+            padding: 10px 22px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .zone-pill i { color: var(--yellow); font-size: 0.72rem; }
+        .zones-note { color: var(--gray-light); font-size: 0.83rem; }
+
+        /* ── CONTACT ──────────────────────── */
+        .contact {
+            background: var(--yellow);
+            color: var(--black);
+            text-align: center;
+        }
+        .contact .s-title { color: var(--black); }
+        .contact-sub { color: rgba(0,0,0,0.55); font-size: 1rem; margin-bottom: 2.5rem; }
+
+        .btn-wa-big {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--black);
+            color: var(--white);
+            text-decoration: none;
+            padding: 18px 38px;
+            border-radius: 4px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            font-family: 'Barlow Condensed', sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.2s;
+            margin-bottom: 2rem;
+        }
+        .btn-wa-big:hover { background: #111; transform: translateY(-2px); }
+        .btn-wa-big i { font-size: 1.3rem; color: var(--wa); }
+
+        .socials {
+            display: flex;
+            gap: 1.2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .social-a {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            color: rgba(0,0,0,0.55);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+        .social-a:hover { color: var(--black); }
+        .social-sep { color: rgba(0,0,0,0.25); }
+
+        /* ── FOOTER ───────────────────────── */
+        footer {
+            background: var(--black);
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding: 1.8rem 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .f-brand {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: 1.15rem;
+        }
+        .f-brand span { color: var(--yellow); }
+        .f-copy { color: var(--gray-light); font-size: 0.78rem; }
+        .f-credit { color: var(--gray-light); font-size: 0.78rem; }
+        .f-credit a {
+            color: var(--yellow);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        .f-credit a:hover { opacity: 0.75; }
+
+        /* ── WA FLOAT ─────────────────────── */
+        .wa-float {
+            position: fixed;
+            bottom: 24px; right: 24px;
+            z-index: 999;
+            width: 60px; height: 60px;
+            background: var(--wa);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 4px 22px rgba(37,211,102,0.38);
+            animation: wapulse 2.5s infinite;
+            transition: transform 0.2s;
+        }
+        .wa-float:hover { transform: scale(1.1); }
+
+        /* ── ANIMATIONS ───────────────────── */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-18px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(18px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes wapulse {
+            0%,100% { box-shadow: 0 4px 22px rgba(37,211,102,0.38); }
+            50%      { box-shadow: 0 4px 34px rgba(37,211,102,0.65); }
+        }
+
+        /* ── RESPONSIVE ───────────────────── */
+        @media (max-width: 820px) {
+            .nav-links { display: none; }
+            .cr-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+            .hero-stats { gap: 2rem; }
+        }
+        @media (max-width: 480px) {
+            .hero-stats { gap: 1.5rem; }
+            .stat-num { font-size: 3rem; }
+            .hero-btns { flex-direction: column; align-items: center; width: 100%; }
+            .btn-y, .btn-ghost { width: 100%; justify-content: center; }
+            .hero-logo-img { height: 120px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ── NAV ────────────────────────────────────── -->
+<nav id="nav">
+    <a href="#inicio" class="nav-logo">
+        <img src="assets/logo.png" alt="Obra Pro">
+    </a>
+
+    <ul class="nav-links">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#coolroof">Cool Roof</a></li>
+        <li><a href="#zonas">Zonas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+
+    <a href="https://wa.me/5493518759375" class="nav-wa" target="_blank" rel="noopener">
+        <i class="fab fa-whatsapp"></i> 351-8759375
+    </a>
+</nav>
+
+
+<!-- ── HERO ───────────────────────────────────── -->
+<section class="hero" id="inicio">
+    <div class="hero-content">
+        <img src="assets/logo.png" alt="Obra Pro" class="hero-logo-img">
+
+        <h1 style="display:none">OBRA<span class="hl">PRO</span></h1>
+        <p class="hero-tag" style="display:none">Profesionales en cada detalle</p>
+
+        <div class="hero-btns">
+            <a href="https://wa.me/5493518759375?text=Hola%20Obra%20Pro!%20Quiero%20pedir%20un%20presupuesto."
+               class="btn-y" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Pedir presupuesto
+            </a>
+            <a href="#servicios" class="btn-ghost">
+                <i class="fas fa-chevron-down"></i> Ver servicios
+            </a>
+        </div>
+
+        <div class="hero-stats">
+            <div>
+                <div class="stat-num">7+</div>
+                <div class="stat-lbl">Servicios</div>
+            </div>
+            <div>
+                <div class="stat-num">5</div>
+                <div class="stat-lbl">Zonas en CBA</div>
+            </div>
+            <div>
+                <div class="stat-num">$0</div>
+                <div class="stat-lbl">Costo presupuesto</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ── SERVICIOS ──────────────────────────────── -->
+<section class="services" id="servicios">
+    <div class="services-hd">
+        <div class="s-label">Lo que hacemos</div>
+        <h2 class="s-title">Nuestros servicios</h2>
+        <p class="s-sub">Soluciones integrales para tu hogar o local en Córdoba Capital.</p>
+    </div>
+
+    <div class="srv-grid">
+        <div class="srv-card">
+            <div class="srv-icon"><i class="fas fa-tools"></i></div>
+            <div class="srv-name">Herrería y Soldadura</div>
+            <div class="srv-desc">Rejas, portones y estructuras metálicas. La seguridad empieza por buenas estructuras.</div>
+        </div>
+
+        <div class="srv-card">
+            <div class="srv-icon"><i class="fas fa-snowflake"></i></div>
+            <div class="srv-name">Aires Acondicionados</div>
+            <div class="srv-desc">Instalación y mantenimiento. Limpiar los filtros cada 30 días reduce hasta un 20% el consumo eléctrico.</div>
+        </div>
+
+        <div class="srv-card">
+            <div class="srv-icon"><i class="fas fa-paint-roller"></i></div>
+            <div class="srv-name">Pintura Exterior/Interior</div>
+            <div class="srv-desc">Renueva ambientes, protege paredes del desgaste, mejora la imagen e incrementa el valor de tu propiedad.</div>
+        </div>
+
+        <div class="srv-card">
+            <div class="srv-icon"><i class="fas fa-home"></i></div>
+            <div class="srv-name">Techos</div>
+            <div class="srv-desc">Reparación e impermeabilización con Cool Roof atérmico. Reducí el calor y los problemas de humedad.</div>
+        </div>
+
+        <div class="srv-card">
+            <div class="srv-icon"><i class="fas fa-hard-hat"></i></div>
+            <div class="srv-name">Albañilería</div>
+            <div class="srv-desc">Construcción, reformas y terminaciones. Trabajo prolijo y duradero para tu hogar o local.</div>
+        </div>
+
+        <div class="srv-card">
+            <div class="srv-icon"><i class="fas fa-bolt"></i></div>
+            <div class="srv-name">Electricidad</div>
+            <div class="srv-desc">Instalaciones eléctricas, reparaciones y mantenimiento. Seguridad y eficiencia garantizadas.</div>
+        </div>
+
+        <div class="srv-card">
+            <div class="srv-icon"><i class="fas fa-wrench"></i></div>
+            <div class="srv-name">Reformas del Hogar</div>
+            <div class="srv-desc">Arreglos generales e integrales. Un solo equipo para resolver todo lo que tu casa necesita.</div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ── COOL ROOF ───────────────────────────────── -->
+<section class="coolroof" id="coolroof">
+    <div class="cr-inner">
+        <div>
+            <div class="cr-badge"><i class="fas fa-star"></i> Nueva Tecnología</div>
+            <h2 class="s-title">Impermeabilizante<br>Atérmico<br><span style="color:var(--yellow)">"Cool Roof"</span></h2>
+            <p class="s-sub" style="margin-top:.8rem">
+                Entre el 25 y el 30% del calor de tu casa viene del techo y paredes. Con Cool Roof bajás la temperatura, ahorrás en electricidad y protegés tu estructura.
+            </p>
+            <ul class="cr-list">
+                <li><span class="cr-check"></span>100% impermeable</li>
+                <li><span class="cr-check"></span>Sin olor ni compuestos orgánicos volátiles</li>
+                <li><span class="cr-check"></span>98% de reflectancia solar</li>
+                <li><span class="cr-check"></span>Compensa CO₂ y purifica el ambiente</li>
+                <li><span class="cr-check"></span>Resistente a hongos, moho y rayos UV</li>
+                <li><span class="cr-check"></span>Apto para losa, madera, tejas y chapa</li>
+                <li><span class="cr-check"></span>Presupuestos con y sin colocación</li>
+            </ul>
+        </div>
+
+        <div class="cr-visual">
+            <div class="cr-visual-title">¿De dónde viene el calor de tu casa?</div>
+
+            <div class="heat-row">
+                <span class="heat-lbl">Techo</span>
+                <div class="heat-bar"><div class="heat-fill" style="width:100%"></div></div>
+                <span class="heat-pct">30%</span>
+            </div>
+            <div class="heat-row">
+                <span class="heat-lbl">Muros</span>
+                <div class="heat-bar"><div class="heat-fill" style="width:83%"></div></div>
+                <span class="heat-pct">25%</span>
+            </div>
+            <div class="heat-row">
+                <span class="heat-lbl">Ventilación</span>
+                <div class="heat-bar"><div class="heat-fill" style="width:67%"></div></div>
+                <span class="heat-pct">20%</span>
+            </div>
+            <div class="heat-row">
+                <span class="heat-lbl">Ventanas</span>
+                <div class="heat-bar"><div class="heat-fill" style="width:43%"></div></div>
+                <span class="heat-pct">13%</span>
+            </div>
+            <div class="heat-row">
+                <span class="heat-lbl">Puertas</span>
+                <div class="heat-bar"><div class="heat-fill" style="width:17%"></div></div>
+                <span class="heat-pct">5%</span>
+            </div>
+            <div class="heat-row">
+                <span class="heat-lbl">Suelos</span>
+                <div class="heat-bar"><div class="heat-fill" style="width:23%"></div></div>
+                <span class="heat-pct">7%</span>
+            </div>
+
+            <a href="https://wa.me/5493518759375?text=Hola!%20Quiero%20info%20sobre%20el%20Cool%20Roof."
+               class="btn-y" target="_blank" rel="noopener"
+               style="margin-top:2rem; width:100%; justify-content:center; font-size:.88rem">
+                <i class="fab fa-whatsapp"></i> Consultar Cool Roof
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<!-- ── WHY US ─────────────────────────────────── -->
+<section class="whyus">
+    <div class="whyus-hd">
+        <div class="s-label">Por qué elegirnos</div>
+        <h2 class="s-title">Profesionales<br>en cada detalle</h2>
+    </div>
+
+    <div class="pillars">
+        <div class="pillar">
+            <div class="pillar-icon"><i class="fas fa-clipboard-check"></i></div>
+            <div class="pillar-title">Presupuesto sin cargo</div>
+            <div class="pillar-desc">Evaluamos tu trabajo sin compromiso y te damos un presupuesto claro y detallado.</div>
+        </div>
+        <div class="pillar">
+            <div class="pillar-icon"><i class="fas fa-shield-alt"></i></div>
+            <div class="pillar-title">Trabajo garantizado</div>
+            <div class="pillar-desc">Nos comprometemos con la calidad en cada proyecto, sin importar el tamaño.</div>
+        </div>
+        <div class="pillar">
+            <div class="pillar-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="pillar-title">Cubrimos toda CBA</div>
+            <div class="pillar-desc">Trabajamos en Centro, Alta, Nueva Córdoba, B° Jardín y San Vicente.</div>
+        </div>
+        <div class="pillar">
+            <div class="pillar-icon"><i class="fas fa-layer-group"></i></div>
+            <div class="pillar-title">Servicio integral</div>
+            <div class="pillar-desc">Un solo equipo para herrería, techos, pintura, aires, electricidad y más.</div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ── ZONAS ──────────────────────────────────── -->
+<section class="zones" id="zonas">
+    <div class="zones-hd">
+        <div class="s-label">Dónde trabajamos</div>
+        <h2 class="s-title">Córdoba Capital</h2>
+        <p class="s-sub" style="margin:.5rem auto 0; text-align:center">Atendemos a domicilio en las siguientes zonas:</p>
+    </div>
+
+    <div class="zone-pills">
+        <div class="zone-pill"><i class="fas fa-map-pin"></i> Zona Centro</div>
+        <div class="zone-pill"><i class="fas fa-map-pin"></i> Alta Córdoba</div>
+        <div class="zone-pill"><i class="fas fa-map-pin"></i> Nueva Córdoba</div>
+        <div class="zone-pill"><i class="fas fa-map-pin"></i> Barrio Jardín</div>
+        <div class="zone-pill"><i class="fas fa-map-pin"></i> Barrio San Vicente</div>
+    </div>
+
+    <p class="zones-note">¿No estás en estas zonas? Consultanos igual, podemos ir.</p>
+</section>
+
+
+<!-- ── CONTACTO ───────────────────────────────── -->
+<section class="contact" id="contacto">
+    <div class="s-label" style="color:rgba(0,0,0,.45)">Hablemos</div>
+    <h2 class="s-title" style="font-size:clamp(1.8rem,5vw,3.2rem)">
+        ¿Necesitás un presupuesto?<br>Te respondemos hoy.
+    </h2>
+    <p class="contact-sub">Sin costo, sin compromiso. Solo decinos qué necesitás.</p>
+
+    <div>
+        <a href="https://wa.me/5493518759375?text=Hola%20Obra%20Pro!%20Quiero%20pedir%20un%20presupuesto."
+           class="btn-wa-big" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i> Escribir por WhatsApp &nbsp;·&nbsp; 351-8759375
+        </a>
+    </div>
+
+    <div class="socials">
+        <a href="https://www.facebook.com/obraprocba" class="social-a" target="_blank" rel="noopener">
+            <i class="fab fa-facebook"></i> OBRAPROCBA
+        </a>
+        <span class="social-sep">·</span>
+        <a href="https://www.instagram.com/obraprocba" class="social-a" target="_blank" rel="noopener">
+            <i class="fab fa-instagram"></i> OBRAPROCBA
+        </a>
+    </div>
+</section>
+
+
+<!-- ── FOOTER ─────────────────────────────────── -->
+<footer>
+    <div class="f-brand">OBRA <span>PRO</span> · Profesionales en cada detalle</div>
+    <div class="f-copy">Córdoba Capital &nbsp;·&nbsp; © 2024</div>
+    <div class="f-credit">
+        Desarrollado por <a href="https://mariaflorenciagala.netlify.app/" target="_blank" rel="noopener">Maria Florencia Gala</a>
+    </div>
+</footer>
+
+
+<!-- ── WHATSAPP FLOTANTE ───────────────────────── -->
+<a href="https://wa.me/5493518759375?text=Hola%20Obra%20Pro!%20Quiero%20pedir%20un%20presupuesto."
+   class="wa-float" target="_blank" rel="noopener" title="Escribir por WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+
+<script>
+    // Nav border en scroll
+    const navEl = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+        navEl.style.borderBottomColor = scrollY > 40
+            ? 'rgba(255,215,0,0.25)'
+            : 'rgba(255,215,0,0.12)';
+    });
+
+    // Fade-in al hacer scroll (IntersectionObserver)
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.style.opacity = '1';
+                e.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.srv-card, .pillar, .zone-pill, .cr-visual').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        observer.observe(el);
+    });
+</script>
+
+</body>
+</html>
