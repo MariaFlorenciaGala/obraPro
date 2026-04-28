@@ -69,7 +69,7 @@ Sin frameworks, sin dependencias de Node, sin proceso de build. Un solo archivo 
 
 ```
 ObraPro/
-├── obrapro.html      # Sitio completo (HTML + CSS + JS)
+├── index.html        # Sitio completo (HTML + CSS + JS)
 ├── readme.md
 └── assets/
     ├── favicon.png
@@ -80,7 +80,7 @@ ObraPro/
 
 ## Cómo usar
 
-No requiere instalación ni dependencias. Solo abrir `obrapro.html` en cualquier navegador moderno o desplegar el directorio en cualquier hosting estático (Netlify, Vercel, GitHub Pages, etc.).
+No requiere instalación ni dependencias. Solo abrir `index.html` en cualquier navegador moderno o desplegar el directorio en cualquier hosting estático (Netlify, Vercel, GitHub Pages, etc.).
 
 ---
 
