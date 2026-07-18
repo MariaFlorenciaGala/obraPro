@@ -1745,6 +1745,17 @@
     <p class="contact-sub">Escribinos y respondemos en menos de 30 minutos. Sin costo, sin compromiso.</p>
 
     <div>
+        <!-- Event snippet for Contacto conversion page In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. --> 
+        <script> 
+            function gtag_report_conversion(url) { 
+                var callback = function () { 
+                    if (typeof(url) != 'undefined') { 
+                        window.location = url; 
+                    } 
+                }; gtag('event', 'conversion', { 
+                    'send_to': 'AW-18325401950/zU6mCM_HxtEcEN7inaJE', 'event_callback': callback }); return false; 
+            } 
+        </script>
         <a href="https://wa.me/5493518759375?text=Hola%20Obra%20Pro!%20Quiero%20pedir%20un%20presupuesto."
            class="btn-wa-big" target="_blank" rel="noopener">
             <i class="fab fa-whatsapp"></i> Escribir por WhatsApp &nbsp;·&nbsp; 351-8759375
