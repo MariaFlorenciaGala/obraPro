@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herrería y Soldadura en Córdoba | Rejas, Portones y Cerramientos a Medida — Obra Pro</title>
+    <meta name="description" content="Rejas, portones y cerramientos a medida en Córdoba Capital. Soldadura prolija, materiales de calidad y presupuesto en el día. Llamá o escribinos por WhatsApp.">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <link rel="canonical" href="https://obraprocba.netlify.app/herreria.html">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#FFD700">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Herrería y Soldadura en Córdoba | Rejas, Portones y Cerramientos a Medida">
+    <meta property="og:description" content="Rejas, portones y cerramientos a medida en Córdoba Capital. Soldadura prolija y presupuesto en el día.">
+    <meta property="og:image" content="https://obraprocba.netlify.app/assets/trabajo-herreria2.jpg">
+    <meta property="og:url" content="https://obraprocba.netlify.app/herreria.html">
+    <meta property="og:locale" content="es_AR">
+    <meta property="og:site_name" content="Obra Pro">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18325401950"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-18325401950');
+    </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2622796324710042');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2622796324710042&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* ── Estilos propios de la landing de herrería (el resto viene de styles.css) ── */
+        .hh-nav-actions { display: flex; align-items: center; gap: 10px; }
+        .hh-nav-btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            min-height: 44px; padding: 0 18px; border-radius: 50px;
+            font-weight: 700; font-size: 0.9rem; text-decoration: none; white-space: nowrap;
+            transition: opacity .2s;
+        }
+        .hh-nav-btn:hover { opacity: .88; }
+        .hh-nav-btn.call { background: var(--yellow); color: var(--black); }
+        .hh-nav-btn.wa { background: var(--wa); color: #fff; }
+
+        .hh {
+            padding: 130px 5% 64px;
+            background:
+                repeating-linear-gradient(90deg, rgba(255,255,255,0.015) 0px, rgba(255,255,255,0.015) 1px, transparent 1px, transparent 60px),
+                repeating-linear-gradient(0deg, rgba(255,255,255,0.015) 0px, rgba(255,255,255,0.015) 1px, transparent 1px, transparent 60px),
+                linear-gradient(160deg, #1a1a1a 0%, #0d0d0d 40%, #080808 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hh::before {
+            content: ''; position: absolute; inset: 0; pointer-events: none;
+            background: radial-gradient(ellipse at 50% 0%, rgba(255,215,0,0.06) 0%, transparent 60%);
+        }
+        .hh-inner {
+            position: relative; max-width: 1180px; margin: 0 auto;
+            display: grid; grid-template-columns: 1.15fr .85fr; gap: 3rem; align-items: center;
+        }
+        .hh h1 {
+            font-family: 'Barlow Condensed', sans-serif; font-weight: 900;
+            font-size: clamp(2.3rem, 6vw, 4.2rem); line-height: 1.02; margin: .5rem 0 1rem;
+        }
+        .hh h1 span { color: var(--yellow); }
+        .hh-sub { color: rgba(255,255,255,.8); font-size: 1.05rem; max-width: 36rem; margin-bottom: 1.6rem; }
+        .hh-btns { display: flex; gap: .9rem; flex-wrap: wrap; }
+        .hh-btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+            min-height: 54px; padding: 0 28px; border-radius: 4px; text-decoration: none;
+            font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.15rem;
+            letter-spacing: 1px; text-transform: uppercase; transition: all .2s;
+        }
+        .hh-btn i { font-size: 1.25rem; }
+        .hh-btn.wa { background: var(--wa); color: #fff; }
+        .hh-btn.call { background: var(--yellow); color: var(--black); }
+        .hh-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+        .hh-note { margin-top: 1.1rem; color: var(--gray-light); font-size: .85rem; max-width: 34rem; }
+        .hh-photo {
+            border: 1px solid rgba(255,215,0,.25); border-radius: 8px; overflow: hidden;
+            aspect-ratio: 4/3; background: #141414;
+            box-shadow: 0 20px 60px rgba(0,0,0,.5);
+        }
+        .hh-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+        .jobs-hd, .gal-hd, .steps-hd { margin-bottom: 2rem; }
+        .jobs-note { color: var(--gray-light); font-size: .85rem; margin-top: 1.4rem; text-align: center; }
+
+        .gal { background: var(--black); }
+        .gal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+        .gal-item { position: relative; margin: 0; aspect-ratio: 4/3; overflow: hidden; background: #141414; }
+        .gal-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s; }
+        .gal-item:hover img { transform: scale(1.04); }
+        .gal-item figcaption {
+            position: absolute; left: 0; right: 0; bottom: 0; padding: 1.8rem .9rem .7rem;
+            background: linear-gradient(transparent, rgba(0,0,0,.88));
+            font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.1rem;
+        }
+        .gal-cta { text-align: center; margin-top: 2rem; }
+
+        .steps { background: var(--gray-dark); }
+        .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; }
+        .step-num {
+            width: 46px; height: 46px; border-radius: 50%; background: var(--yellow); color: var(--black);
+            display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;
+            font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.5rem;
+        }
+        .step-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.25rem; margin-bottom: .3rem; }
+        .step-desc { color: var(--gray-light); font-size: .92rem; }
+
+        .faq { background: var(--black); }
+
+        .contact-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.4rem; }
+        .contact-btns .btn-wa-big { margin-bottom: 0; }
+        .btn-call-big {
+            display: inline-flex; align-items: center; gap: 12px; text-decoration: none;
+            padding: 18px 38px; border-radius: 4px; border: 2px solid var(--black); color: var(--black);
+            font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.1rem;
+            letter-spacing: 1px; text-transform: uppercase; transition: all .2s;
+        }
+        .btn-call-big:hover { background: var(--black); color: var(--yellow); transform: translateY(-2px); }
+        .f-links a { color: var(--gray-light); text-decoration: none; font-size: .85rem; }
+        .f-links a:hover { color: var(--yellow); }
+
+        .sticky-cta {
+            display: none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 997; gap: 8px;
+            background: #0d0d0d; border-top: 1px solid rgba(255,215,0,.25);
+            padding: 8px 5% calc(8px + env(safe-area-inset-bottom));
+            box-shadow: 0 -4px 24px rgba(0,0,0,.5);
+        }
+        .sticky-cta a {
+            flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px;
+            min-height: 48px; border-radius: 4px; text-decoration: none;
+            font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.05rem;
+            letter-spacing: .5px; text-transform: uppercase;
+        }
+        .sticky-cta .c-call { background: var(--yellow); color: var(--black); }
+        .sticky-cta .c-wa { background: var(--wa); color: #fff; }
+
+        @media (max-width: 820px) {
+            .hh { padding: 112px 5% 44px; }
+            .hh-inner { grid-template-columns: 1fr; }
+            .hh-photo { display: none; }
+            .hh-nav-btn.wa { display: none; }
+            .gal-grid { grid-template-columns: repeat(2, 1fr); }
+            .sticky-cta { display: flex; }
+            body { padding-bottom: 72px; }
+            .wa-float { display: none; }
+        }
+        @media (max-width: 480px) {
+            .hh-btns { flex-direction: column; }
+            .hh-btn { width: 100%; }
+            .gal-grid { grid-template-columns: 1fr; }
+            .contact-btns a { width: 100%; justify-content: center; }
+        }
+    </style>
+    <noscript><style>.anim { opacity: 1; transform: none; }</style></noscript>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav id="nav">
+    <a href="#inicio" class="nav-logo">
+        <img src="assets/logo.png" alt="Obra Pro" width="180" height="45">
+    </a>
+    <div class="hh-nav-actions">
+        <a href="tel:+5493518759375" class="hh-nav-btn call" aria-label="Llamar a Obra Pro"><i class="fas fa-phone"></i> 351-8759375</a>
+        <a href="https://wa.me/5493518759375?text=Hola%20Obra%20Pro!%20Quiero%20presupuesto%20de%20herrer%C3%ADa.%20(HERR)" class="hh-nav-btn wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    </div>
+</nav>
+
+<!-- ── HERO ── -->
+<header class="hh" id="inicio">
+    <div class="hh-inner">
+        <div>
+            <div class="s-label">Herrería y soldadura · Córdoba Capital y alrededores</div>
+            <h1>Herrería y soldadura en Córdoba: <span>rejas, portones y cerramientos a medida</span></h1>
+            <p class="hh-sub">Soldadura prolija, materiales de calidad y presupuesto en el día. Más de 200 trabajos realizados en Córdoba.</p>
+            <div class="hh-btns">
+                <a href="https://wa.me/5493518759375?text=Hola%20Obra%20Pro!%20Quiero%20presupuesto%20de%20herrer%C3%ADa.%20(HERR)" class="hh-btn wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Pedir presupuesto</a>
+                <a href="tel:+5493518759375" class="hh-btn call"><i class="fas fa-phone"></i> Llamar ahora</a>
+            </div>
+            <p class="hh-note">Si nos mandás una foto y las medidas aproximadas por WhatsApp, agilizamos el presupuesto.</p>
+        </div>
+        <div class="hh-photo">
+            <img src="assets/trabajo-herreria2.jpg" alt="Reja de frente y portón de hierro negro hechos a medida en Córdoba" width="800" height="600" loading="lazy" decoding="async">
+        </div>
+    </div>
+</header>
+
+<!-- ── TRUST STRIP ── -->
+<div class="trust-strip">
+    <div class="trust-item"><i class="fas fa-clipboard-check"></i> Presupuesto en el día</div>
+    <div class="trust-item"><i class="fas fa-shield-alt"></i> Trabajo garantizado</div>
+    <div class="trust-item"><i class="fas fa-star"></i> +200 trabajos en Córdoba</div>
+    <div class="trust-item"><i class="fas fa-clock"></i> Lun a Sáb · 8 a 20</div>
+</div>
+
+<!-- ── TRABAJOS COTIDIANOS ── -->
+<section class="services" id="trabajos-que-hacemos">
+    <div class="jobs-hd">
+        <div class="s-label">Lo que hacemos todos los días</div>
+        <h2 class="s-title">Trabajos de herrería</h2>
+        <p class="s-sub">Elegí lo que necesitás y pedí tu presupuesto por WhatsApp.</p>
+    </div>
+
+    <div class="srv-grid">
+        <div class="srv-card anim">
+            <div class="srv-icon"><i class="fas fa-border-all"></i></div>
+            <h3 class="srv-name">Rejas de ventana</h3>
+            <p class="srv-desc">Protección para ventanas y aberturas, a medida de cada abertura y con terminación en pintura.</p>
+            <a href="https://wa.me/5493518759375?text=Hola%20Obra%20Pro!%20Quiero%20presupuesto%20de%20rejas%20de%20ventana.%20(HERR)" class="srv-cta" target="_blank" rel="noopener">Pedir presupuesto <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="srv-card anim">
+            <div class="srv-icon"><i class="fas fa-shield-halved"></i></div>
+            <h3 class="srv-name">Rejas de frente y cercos</h3>
+            <p class="srv-desc">Cierres de frente y perimetrales para tu casa o local, con el diseño que prefieras.</p>
+            <a href="https://wa.me/5493518759375?text=Hola%20Obra%20Pro!%20Quiero%20presupuesto%20de%20reja%20de%20frente%20o%20cerco.%20(HERR)" class="srv-cta" target="_blank" rel="noopener">Pedir presupuesto <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="srv-card anim">
+            <div class="srv-icon"><i class="fas fa-warehouse"></i></div>
+            <h3 class="srv-name">Portones de garage y entrada</h3>
+            <p class="srv-desc">Portones a medida para cochera o acceso, en el estilo y las medidas de tu frente.</p>
+            <a href="https://wa.me/5493518759375?text=Hola%20Obra%20Pro!%20Quiero%20presupuesto%20de%20port%C3%B3n.%20(HERR)" class="srv-cta" target="_blank" rel="noopener">Pedir presupuesto <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="srv-card anim">
+            <div class="srv-icon"><i class="fas fa-door-closed"></i></div>
+            <h3 class="srv-name">Puertas reja</h3>
+            <p class="srv-desc">Puertas de reja para acceso, patio o balcón, resistentes y con cerradura.</p>
+            <a href="https://wa.me/5493518759375?text=Hola%20Obra%20Pro!%20Quiero%20presupuesto%20de%20puerta%20reja.%20(HERR)" class="srv-cta" target="_blank" rel="noopener">Pedir presupuesto <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="srv-card anim">
+            <div class="srv-icon"><i class="fas fa-ruler-combined"></i></div>
+            <h3 class="srv-name">Cerramientos</h3>
+            <p class="srv-desc">Cerramientos de patio, galería o balcón hechos a medida, para ganar seguridad y espacio.</p>
+            <a href="https://wa.me/5493518759375?text=Hola%20Obra%20Pro!%20Quiero%20presupuesto%20de%20cerramiento.%20(HERR)" class="srv-cta" target="_blank" rel="noopener">Pedir presupuesto <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="srv-card anim">
+            <div class="srv-icon"><i class="fas fa-snowflake"></i></div>
+            <h3 class="srv-name">Protección para equipos de aire</h3>
+            <p class="srv-desc">Jaulas de hierro con candado para el equipo exterior de tu aire acondicionado.</p>
+            <a href="https://wa.me/5493518759375?text=Hola%20Obra%20Pro!%20Quiero%20presupuesto%20de%20protecci%C3%B3n%20para%20equipo%20de%20aire.%20(HERR)" class="srv-cta" target="_blank" rel="noopener">Pedir presupuesto <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="srv-card anim">
+            <div class="srv-icon"><i class="fas fa-stairs"></i></div>
+            <h3 class="srv-name">Barandas y escaleras</h3>
+            <p class="srv-desc">Barandas y estructuras de hierro para escaleras, terrazas y balcones.</p>
+            <a href="https://wa.me/5493518759375?text=Hola%20Obra%20Pro!%20Quiero%20presupuesto%20de%20baranda%20o%20escalera.%20(HERR)" class="srv-cta" target="_blank" rel="noopener">Pedir presupuesto <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="srv-card anim">
+            <div class="srv-icon"><i class="fas fa-screwdriver-wrench"></i></div>
+            <h3 class="srv-name">Reparaciones y soldadura</h3>
+            <p class="srv-desc">Arreglos de portones, rejas y estructuras: refuerzos, bisagras, ruedas y soldaduras.</p>
+            <a href="https://wa.me/5493518759375?text=Hola%20Obra%20Pro!%20Quiero%20presupuesto%20de%20reparaci%C3%B3n%20o%20soldadura.%20(HERR)" class="srv-cta" target="_blank" rel="noopener">Pedir presupuesto <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+    <p class="jobs-note">¿Necesitás algo que no está en la lista? Escribinos o llamanos y lo vemos.</p>
+</section>
+
+<!-- ── GALERÍA ── -->
+<section class="gal" id="galeria">
+    <div class="gal-hd">
+        <div class="s-label">Nuestro trabajo</div>
+        <h2 class="s-title">Trabajos de herrería realizados</h2>
+        <p class="s-sub">Rejas, portones y protecciones hechos en Córdoba Capital.</p>
+    </div>
+
+    <div class="gal-grid">
+        <figure class="gal-item anim">
+            <img src="assets/trabajo-herreria2.jpg" alt="Reja de frente y portón de hierro negro con lanzas" width="800" height="600" loading="lazy" decoding="async">
+            <figcaption>Reja de frente y portón</figcaption>
+        </figure>
+        <figure class="gal-item anim">
+            <img src="assets/trabajo-herreria6.jpg" alt="Frente completo con portón y reja de diseño en hierro negro" width="800" height="600" loading="lazy" decoding="async">
+            <figcaption>Frente completo con portón</figcaption>
+        </figure>
+        <figure class="gal-item anim">
+            <img src="assets/trabajo-herreria3.jpg" alt="Reja de frente blanca con detalles decorativos" width="800" height="600" loading="lazy" decoding="async">
+            <figcaption>Reja de frente con detalles</figcaption>
+        </figure>
+        <figure class="gal-item anim">
+            <img src="assets/trabajo-herreria1.jpg" alt="Reja blanca de ventana grande con travesaños" width="800" height="600" loading="lazy" decoding="async">
+            <figcaption>Reja de ventana grande</figcaption>
+        </figure>
+        <figure class="gal-item anim">
+            <img src="assets/trabajo-herreria4.jpg" alt="Reja blanca de protección en ventana corrediza" width="800" height="600" loading="lazy" decoding="async">
+            <figcaption>Reja de protección para ventana</figcaption>
+        </figure>
+        <figure class="gal-item anim">
+            <img src="assets/trabajo-herreria5.jpg" alt="Jaula de hierro con candado para proteger un equipo de aire acondicionado" width="800" height="600" loading="lazy" decoding="async">
+            <figcaption>Protección con candado para equipo de aire</figcaption>
+        </figure>
+    </div>
+
+    <div class="gal-cta">
+        <a href="https://wa.me/5493518759375?text=Hola%20Obra%20Pro!%20Vi%20sus%20trabajos%20de%20herrer%C3%ADa%20y%20quiero%20presupuesto.%20(HERR)" class="hh-btn wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Quiero algo así</a>
+    </div>
+</section>
+
+<!-- ── CÓMO TRABAJAMOS ── -->
+<section class="steps" id="como-trabajamos">
+    <div class="steps-hd">
+        <div class="s-label">Cómo trabajamos</div>
+        <h2 class="s-title">Simple y sin vueltas</h2>
+    </div>
+    <div class="steps-grid">
+        <div class="anim">
+            <div class="step-num">1</div>
+            <div class="step-title">Nos escribís o llamás</div>
+            <p class="step-desc">Contanos qué necesitás. Con una foto y medidas aproximadas nos ayudás a avanzar más rápido.</p>
+        </div>
+        <div class="anim">
+            <div class="step-num">2</div>
+            <div class="step-title">Medición y presupuesto</div>
+            <p class="step-desc">Coordinamos la medición y te pasamos el presupuesto con el precio antes de empezar.</p>
+        </div>
+        <div class="anim">
+            <div class="step-num">3</div>
+            <div class="step-title">Fabricación a medida</div>
+            <p class="step-desc">Trabajamos con soldadura prolija y materiales de calidad, según las medidas de tu obra.</p>
+        </div>
+        <div class="anim">
+            <div class="step-num">4</div>
+            <div class="step-title">Instalación y entrega</div>
+            <p class="step-desc">Colocamos, revisamos y te dejamos el trabajo terminado y garantizado.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="faq" id="faq">
+    <div class="faq-hd">
+        <div class="s-label">Preguntas frecuentes</div>
+        <h2 class="s-title">Antes de pedir tu presupuesto</h2>
+    </div>
+    <div class="faq-list">
+        <div class="faq-item">
+            <button class="faq-question">¿Hacen los trabajos a medida? <i class="fas fa-chevron-down faq-icon"></i></button>
+            <div class="faq-answer">Sí. Rejas, portones y cerramientos se fabrican a medida, según las dimensiones de tu abertura, frente o patio y el diseño que prefieras.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">¿Cómo pido un presupuesto? <i class="fas fa-chevron-down faq-icon"></i></button>
+            <div class="faq-answer">Escribinos por WhatsApp o llamanos al 351-8759375. Si nos mandás una foto y las medidas aproximadas, avanzamos más rápido. Coordinamos la medición y te pasamos el presupuesto antes de empezar.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">¿Cuánto tarda un trabajo? <i class="fas fa-chevron-down faq-icon"></i></button>
+            <div class="faq-answer">Depende del tipo y del tamaño del trabajo. Siempre te damos un tiempo estimado antes de empezar.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">¿Tienen garantía? <i class="fas fa-chevron-down faq-icon"></i></button>
+            <div class="faq-answer">Sí, todos nuestros trabajos tienen garantía. El plazo depende del tipo de trabajo y te lo informamos en el presupuesto.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">¿Arreglan rejas o portones que ya tengo? <i class="fas fa-chevron-down faq-icon"></i></button>
+            <div class="faq-answer">Sí, hacemos reparaciones y soldaduras. Mandanos una foto por WhatsApp y te decimos qué se puede hacer.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">¿En qué zonas trabajan? <i class="fas fa-chevron-down faq-icon"></i></button>
+            <div class="faq-answer">Trabajamos en Córdoba Capital y alrededores. Escribinos con tu barrio y confirmamos.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">¿Qué formas de pago aceptan? <i class="fas fa-chevron-down faq-icon"></i></button>
+            <div class="faq-answer">Aceptamos efectivo y transferencia bancaria. Consultanos por otras modalidades al pedir tu presupuesto.</div>
+        </div>
+    </div>
+</section>
+
+<!-- ── CONTACTO ── -->
+<section class="contact" id="contacto">
+    <div class="s-label">Hablemos</div>
+    <h2 class="s-title">¿Necesitás una reja<br>o un portón a medida?</h2>
+    <p class="contact-sub">Escribinos o llamanos y te pasamos el presupuesto.</p>
+
+    <div class="contact-btns">
+        <a href="https://wa.me/5493518759375?text=Hola%20Obra%20Pro!%20Quiero%20presupuesto%20de%20herrer%C3%ADa.%20(HERR)" class="btn-wa-big" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i> Escribir por WhatsApp
+        </a>
+        <a href="tel:+5493518759375" class="btn-call-big"><i class="fas fa-phone"></i> Llamar · 351-8759375</a>
+    </div>
+
+    <div class="contact-hours">
+        <i class="fas fa-clock"></i> Lunes a Sábado &nbsp;·&nbsp; 8:00 a 20:00
+    </div>
+
+    <div class="socials">
+        <a href="https://www.facebook.com/obraprocba" class="social-a" target="_blank" rel="noopener"><i class="fab fa-facebook"></i> OBRAPROCBA</a>
+        <span class="social-sep">·</span>
+        <a href="https://www.instagram.com/obraprocba" class="social-a" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> OBRAPROCBA</a>
+    </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+    <div class="f-brand">OBRA <span>PRO</span> · Profesionales en cada detalle</div>
+    <div class="f-links"><a href="index.html#servicios">Ver todos los servicios</a></div>
+    <div class="f-copy">Córdoba Capital &nbsp;·&nbsp; © 2026</div>
+    <div class="f-credit">
+        Desarrollado por <a href="https://mariaflorenciagala.netlify.app/" target="_blank" rel="noopener">Maria Florencia Gala</a>
+    </div>
+</footer>
+
+<!-- ── BARRA FIJA MÓVIL: LLAMAR + WHATSAPP ── -->
+<div class="sticky-cta">
+    <a href="tel:+5493518759375" class="c-call"><i class="fas fa-phone"></i> Llamar</a>
+    <a href="https://wa.me/5493518759375?text=Hola%20Obra%20Pro!%20Quiero%20presupuesto%20de%20herrer%C3%ADa.%20(HERR)" class="c-wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+</div>
+
+<!-- ── WA FLOTANTE (solo escritorio) ── -->
+<a href="https://wa.me/5493518759375?text=Hola%20Obra%20Pro!%20Quiero%20presupuesto%20de%20herrer%C3%ADa.%20(HERR)"
+   class="wa-float" target="_blank" rel="noopener" title="Escribir por WhatsApp" aria-label="Escribir por WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Obra Pro — Herrería y Soldadura",
+  "description": "Rejas, portones y cerramientos a medida en Córdoba Capital. Soldadura prolija, materiales de calidad y presupuesto en el día.",
+  "url": "https://obraprocba.netlify.app/herreria.html",
+  "telephone": "+5493518759375",
+  "image": "https://obraprocba.netlify.app/assets/trabajo-herreria2.jpg",
+  "priceRange": "$$",
+  "openingHours": ["Mo-Sa 08:00-20:00"],
+  "address": { "@type": "PostalAddress", "addressLocality": "Córdoba", "addressRegion": "Córdoba", "addressCountry": "AR" },
+  "areaServed": "Córdoba Capital",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios de herrería",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Rejas de ventana" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Rejas de frente y cercos" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Portones de garage y entrada" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cerramientos a medida" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reparaciones y soldadura" } }
+    ]
+  },
+  "sameAs": ["https://www.facebook.com/obraprocba", "https://www.instagram.com/obraprocba"]
+}
+</script>
+
+<script>
+    // Código de campaña en el mensaje de WhatsApp:
+    //   (G-HERR) = llegó desde Google Ads   ·   (HERR) = llegó por otro camino (directo, orgánico, redes)
+    (function () {
+        var fromAds = /[?&](gclid|gbraid|wbraid)=|[?&]utm_source=google/i.test(location.search);
+        if (!fromAds) return;
+        document.querySelectorAll('a[href*="wa.me"]').forEach(function (a) {
+            a.setAttribute('href', a.getAttribute('href').replace('(HERR)', '(G-HERR)'));
+        });
+    })();
+
+    // Conversiones: WhatsApp y llamadas (un solo listener para todos los botones)
+    (function () {
+        var LEAD = 'AW-18325401950/A92PCLOLnfEcEN7inaJE';
+        // Si creás en Google Ads una conversión aparte para llamadas, pegá acá su etiqueta
+        // (por ejemplo 'AW-18325401950/xxxxxxxx') para medirlas por separado. Si queda vacío, cuentan como LEAD.
+        var CALL = '';
+        document.querySelectorAll('a[href*="wa.me"], a[href^="tel:"]').forEach(function (a) {
+            a.addEventListener('click', function () {
+                var isCall = (a.getAttribute('href') || '').indexOf('tel:') === 0;
+                if (typeof gtag === 'function') {
+                    gtag('event', 'conversion', { send_to: (isCall && CALL) ? CALL : LEAD });
+                }
+                if (typeof fbq === 'function') { fbq('track', isCall ? 'Contact' : 'Lead'); }
+            });
+        });
+    })();
+
+    // FAQ
+    document.querySelectorAll('.faq-question').forEach(function (btn) {
+        btn.setAttribute('aria-expanded', 'false');
+        btn.addEventListener('click', function () {
+            var answer = btn.nextElementSibling;
+            var isActive = btn.classList.contains('active');
+            document.querySelectorAll('.faq-question').forEach(function (b) {
+                b.classList.remove('active');
+                b.setAttribute('aria-expanded', 'false');
+                b.nextElementSibling.classList.remove('open');
+            });
+            if (!isActive) {
+                btn.classList.add('active');
+                btn.setAttribute('aria-expanded', 'true');
+                answer.classList.add('open');
+            }
+        });
+    });
+
+    // Animaciones al hacer scroll
+    if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+                if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+            });
+        }, { threshold: 0.08 });
+        document.querySelectorAll('.anim').forEach(function (el) { observer.observe(el); });
+    } else {
+        document.querySelectorAll('.anim').forEach(function (el) { el.classList.add('visible'); });
+    }
+</script>
+
+</body>
+</html>
